@@ -1,0 +1,26 @@
+Gates syntax:
+and
+not
+or
+xor
+
+Asigment by:
+=
+
+Outputs
+OUT0
+OUT1
+OUT2
+OUT3
+
+Inputs
+IN0
+IN1
+IN2
+IN3
+
+terminitation by ";"
+
+Example:
+OUT0 = IN2 and IN4 or IN3;
+OUT1 = not IN2;

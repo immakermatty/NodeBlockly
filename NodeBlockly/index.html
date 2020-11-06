@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="google" value="notranslate">
+    <title>NodeBLockly</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="/storage.js"></script>-->
+    <script src="../blockly/blockly_uncompressed.js"></script>
+    <script src="../blockly/blocks/nodeblockly.js"></script>
+    <script src="../blockly/generators/nodeblockly/nodeblockly_core.js"></script>
+    <script src="../blockly/generators/nodeblockly/nodeblockly.js"></script>
+    <script src="code.js"></script>
+</head>
+<body>
+    <table class="main">
+        <tr>
+            <td colspan=2 height=55px;>
+                <h1>
+                    <img src='logo.png' style="width:200px;height:55px;">
+                    <span id="title">Loading...</span>
+                </h1>
+            </td>
+            <td class="farSide">
+                <select id="languageMenu"></select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan=3>
+                <table width="100%">
+                    <tr id="tabRow" height="1em">
+                        <td id="tab_blocks" class="tabon">...</td>
+                        <td class="tabmin">&nbsp;</td>
+                        <td id="tab_javascript" class="taboff">NodeBLockly</td>
+                        <td class="tabmin">&nbsp;</td>
+                        <td id="tab_xml" class="taboff">XML</td>
+                        <td class="tabmax">
+                            <button id="saveButton" class="notext" title="...">
+                                <img src='../blockly/media/1x1.gif' class="save icon21">
+                            </button>
+                            <button id="loadButton" class="notext" title="...">
+                                <img src='../blockly/media/1x1.gif' class="load icon21">
+                            </button>
+                            <button id="trashButton" class="notext" title="...">
+                                <img src='../blockly/media/1x1.gif' class="trash icon21">
+                            </button>
+                            <button id="runButton" class="notext primary" title="...">
+                                <img src='../blockly/media/1x1.gif' class="run icon21">
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr height="100%">
+            <td width="99%" id="content_area"></td>
+            <td width="1%">&nbsp;</td>
+            <td>
+                <pre id="preview_code" class="preview"></pre>
+            </td>
+        </tr>
+    </table>
+    <div id="content_blocks" class="content"></div>
+    <pre id="content_javascript" class="content"></pre>
+    <textarea id="content_xml" class="content" wrap="off"></textarea>
+    <xml id="toolbox" style="display: none">
+        <category name="Input">
+            <block type="node_in">
+                <field name="SENSOR">SENSOR_0</field>
+            </block>
+        </category>
+        <category name="Output">
+            <block type="node_out">
+                <field name="ACTION">ACTION_0</field>
+            </block>
+        </category>
+        <category name="Gates">
+            <block type="node_2gate">
+                <field name="GTYPE">and</field>
+            </block>
+            <block type="node_2gate">
+                <field name="GTYPE">or</field>
+            </block>
+            <block type="node_2gate">
+                <field name="GTYPE">xor</field>
+            </block>
+            <block type="node_1gate">
+                <field name="GTYPE">not</field>
+            </block>
+        </category>
+    </xml>
+</body>
+</html>
